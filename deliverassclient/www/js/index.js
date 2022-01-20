@@ -26,4 +26,27 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
+
+}
+
+$("#register-form").css("display", "none");
+$(".login-tab").addClass("active");
+$(".register-tab").addClass("no-active");
+
+function login(){
+    $(".login-tab").removeClass("no-active");
+    $(".login-tab").addClass("active");
+    $(".register-tab").removeClass("active");
+    $(".register-tab").addClass("no-active");
+    $("#login-form").css("display", "block");
+    $("#register-form").css("display", "none");
+}
+
+function register(){
+    $(".login-tab").removeClass("active");
+    $(".login-tab").addClass("no-active");
+    $(".register-tab").removeClass("no-active");
+    $(".register-tab").addClass("active");
+    $("#login-form").css("display", "none");
+    $("#register-form").css("display", "block");
 }
