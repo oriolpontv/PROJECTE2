@@ -9,11 +9,8 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <script src="js/accessibilitat.js"></script>
     <script src="https://kit.fontawesome.com/69fb3d2fdc.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
-
     <title>Deliverass Client</title>
 </head>
 
@@ -24,34 +21,43 @@
     </div>
     <img src="img/Logotip.png" class="logo-main" />
     <div class="formulari">
-        <form id="login-form">
-            <label for="lname">DNI</label>
-            <input type="text" id="id_treballador" name="id_treballador" placeholder="Escriu el teu DNI..">
 
-            <label for="lname">CONTRASENYA</label>
-            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya..">
+        <!-- LOGIN -->
+        <form id="login-form">
+            <label for="dni2">DNI</label>
+            <input type="text" id="dni2" name="dni2" placeholder="Escriu el teu DNI..">
+
+            <label for="password2">CONTRASENYA</label>
+            <input type="password" id="password2" name="password2" placeholder="Escriu la teva contrasenya..">
 
             <input type="button" id="b1" value="ACCEDIR">
         </form>
-        <form id="register-form">
-            <label for="lname">DNI</label>
-            <input type="text" id="id_treballador" name="id_treballador" placeholder="Escriu el teu DNI..">
 
-            <label for="lname">CONTRASENYA</label>
-            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya..">
+        <!-- REGISTRE -->
+        <form action="" method="POST" id="register-form">
 
-            <label for="lname">DNI</label>
-            <input type="text" id="id_treballador" name="id_treballador" placeholder="Escriu el teu DNI..">
+            <label for="nom">NOM</label>
+            <input type="text" id="nom" name="nom" placeholder="Escriu el teu nom.."required>
 
-            <label for="lname">CONTRASENYA</label>
-            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya..">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" placeholder="Escriu el teu DNI.."required>
 
-            <input type="button" id="b1" value="REGISTRAR-SE">
+            <label for="direccio">DIRECCIO</label>
+            <input type="text" id="direccio" name="direccio" placeholder="Escriu la teva direccio.."required>
+
+            <label for="cp">CP</label>
+            <input type="text" id="cp" name="cp" placeholder="Escriu el teu C.P.."required>
+
+            <label for="password">CONTRASENYA</label>
+            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya.."required>
+
+            <input type="submit" onclick="registre()" id="b1" value="REGISTRAR-SE">
         </form>
+
         <button id="myBtn"><i class="fas fa-universal-access"></i>ACCESSIBILITAT</button>
         <div id="myModal" class="modal">
 
-            <!-- Modal content -->
+            <!-- ACCESSIBILITAT -->
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="botons_accessibilitat">
@@ -75,7 +81,6 @@
         </div>
 
     </div>
-
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
     <script src="js/accessibilitat.js"></script>
