@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -15,44 +14,6 @@
 </head>
 
 <body>
-    <div class="main-tabs">
-        <div class="login-tab" onclick="login()">ACCEDIR</div>
-        <div class="register-tab" onclick="register()">REGISTRAR-SE</div>
-    </div>
-    <img src="img/Logotip.png" class="logo-main" />
-    <div class="formulari">
-
-        <!-- LOGIN -->
-        <form id="login-form">
-            <label for="dni2">DNI</label>
-            <input type="text" id="dni2" name="dni2" placeholder="Escriu el teu DNI.."required>
-
-            <label for="password2">CONTRASENYA</label>
-            <input type="password" id="password2" name="password2" placeholder="Escriu la teva contrasenya.."required>
-
-            <input type="submit" onclick="accedir()" id="b1" value="ACCEDIR">
-        </form>
-
-        <!-- REGISTRE -->
-        <form action="" method="POST" id="register-form">
-
-            <label for="nom">NOM</label>
-            <input type="text" id="nom" name="nom" placeholder="Escriu el teu nom.."required>
-
-            <label for="dni">DNI</label>
-            <input type="text" id="dni" name="dni" placeholder="Escriu el teu DNI.."required>
-
-            <label for="direccio">DIRECCIO</label>
-            <input type="text" id="direccio" name="direccio" placeholder="Escriu la teva direccio.."required>
-
-            <label for="cp">CP</label>
-            <input type="text" id="cp" name="cp" placeholder="Escriu el teu C.P.."required>
-
-            <label for="password">CONTRASENYA</label>
-            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya.."required>
-
-            <input type="submit" onclick="registre()" id="b1" value="REGISTRAR-SE">
-        </form>
 
         <button id="myBtn"><i class="fas fa-universal-access"></i>ACCESSIBILITAT</button>
         <div id="myModal" class="modal">
@@ -80,12 +41,9 @@
 
         </div>
 
-    </div>
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
     <script src="js/accessibilitat.js"></script>
-    <script src="js/registre.js"></script>
-    <script src="js/login.js"></script>
 </body>
 
 </html>
