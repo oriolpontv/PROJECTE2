@@ -52,3 +52,5 @@ function register(){
     $("#register-form").css("display", "block");
 }
 
+// let loginref = sessionStorage.getItem("dni");
+// document.getElementById("login-ref").innerHTML = "Benvingut: " + loginref;

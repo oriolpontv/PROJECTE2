@@ -1,0 +1,293 @@
+@font-face {
+    font-family: Maven Pro Bold;
+    src: url(../fonts/MavenPro-Bold.ttf);
+ }
+ 
+ @font-face {
+    font-family: Maven Pro Regular;
+    src: url(../fonts/MavenPro-Regular.ttf);
+ }
+ 
+ h1, h2, h3, h4, h5, h6{
+    font-family: Maven Pro Bold !important;
+ }
+ *{
+    font-family: Maven Pro Regular;
+ }
+ 
+ body {
+     padding: 5% 0;
+     margin: 0;
+     background: #eaeaea;
+     color: #EEEEEE;
+     font-family: "Lato", sans-serif;
+  }
+
+  label {
+	font-weight: bold;
+    font-family: Maven Pro;
+}
+input[type=text],input[type=email], select {
+    width: 100%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: inline-block;
+    border-bottom: 1px solid #ccc !important;
+    color: black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: transparent;
+    font-family: Maven Pro;
+    font-weight: 400;
+    background-color: transparent;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: inline-block;
+    border-bottom: 1px solid #ccc !important;
+    color: black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: transparent;
+    font-family: Maven Pro;
+    font-weight: 400;
+    background-color: transparent;
+}
+input[type=button], input[type=submit], #resettext, #increasetext {
+    width: 100%;
+    background: rgb(167,26,18);
+    background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Maven Pro;
+}
+
+input[type=button]:hover,input[type=submit]:hover, #resettext:hover, #increasetext:hover {
+	background: rgb(167,26,18);
+    transition: all .4s ease;
+    font-family: Maven Pro;
+  	background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+}
+
+.logo-main {
+   width: 80%;
+   text-align: center;
+}
+
+.formulari {
+
+   padding: 0 25%;
+}
+
+form label{
+   color: black;
+}
+
+a{
+   color: black;
+}
+
+.fas.fa-info-circle{
+   color: rgb(167,26,18);
+   width: 20%;
+
+   padding: 0 20%;
+   padding-top: 50px;
+}
+
+header.accessibilitat, header.paquet{
+   background-color: #C1271F;
+   height: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+header.accessibilitat span, header.paquet span{
+   margin: 0 auto;
+}
+
+.botons_accessibilitat {
+   padding: 30px 25%;
+}
+.titols_botons{
+   font-family: Maven Pro Bold;
+   color: #000;
+}
+.modal {
+   transition: all .4s ease;
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-content {
+   transition: all .4s ease;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+   border-radius: 20px;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ #myBtn {
+   width: 80%;
+   background: rgb(71, 71, 71);
+   background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(61, 61, 61) 75%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 10%;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+}
+
+#myBtn:hover {
+  background: rgb(71, 71, 71);
+   transition: all .4s ease;
+   font-family: Maven Pro;
+    background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+}
+
+#vision, #vision2 {
+   width: 100%;
+    background: rgb(167,26,18);
+    background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Maven Pro;
+}
+#vision:hover, #vision2:hover {
+   background: rgb(167,26,18);
+    transition: all .4s ease;
+    font-family: Maven Pro;
+  	background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+}
+
+.vision-dark{
+   background-color: #000 !important;
+   color: #fff !important;
+   transition: all .4s ease;
+}
+.vision-dark img {
+   filter: contrast(0.5);
+}
+.vision-dark form label{
+   background-color: #000 !important;
+   color: #fff !important;
+}
+.vision-dark input[type=text]{
+   color: #fff !important;
+}
+.paquetnou{
+    padding: 0 10%;
+    padding-bottom: 25%;
+}
+.img_mides{
+    background: #dfdfdf;
+    border-radius: 15px;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+.img_mides img {
+    width: 100%;
+}
+
+.header-paquetnou{
+    font-family: Maven Pro Bold;
+    color: #C1271F;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.intro-paquetnou{
+    color: #000;
+}
+
+#myBtn2 {
+    width: 30%;
+    background: rgb(167,26,18);
+    background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Maven Pro;
+ }
+ 
+ #myBtn2:hover {
+   background: rgb(71, 71, 71);
+    transition: all .4s ease;
+    font-family: Maven Pro;
+     background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+ }
+
+ .main-menu{
+   display: flex;
+   background-color: rgb(167,26,18);
+   position: fixed;
+   padding: 25px 0;
+   bottom: 0;
+   width: 90%;
+   overflow: hidden;
+   height: 25px;
+   border-radius: 50px;
+   margin: 0 5%;
+   margin-bottom: 5%;
+}
+.main-menu .menu-item{
+   width: 33.3%;
+   text-align: center;
+}
+.main-menu .menu-item i{
+   font-size: 28px;
+   color: #fff;
+}
+.main-menu .menu-item i:hover{
+   font-size: 38px;
+   color: #fff;
+   cursor: pointer;
+   transition: all .4s ease;
+}

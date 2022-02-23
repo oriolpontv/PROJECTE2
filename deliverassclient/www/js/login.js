@@ -1,35 +1,24 @@
-function accedir(){
+// $(document).ready()
+        
+//         var dni2 = $("#dni2").val();
+//         var password2 = $("#password2").val();
 
-    // var xhttp2 = new XMLHttpRequest();
+//         console.log(dni2 + password2);
 
-    var dni2 = document.getElementById("dni2").value;
-    var password2 = document.getElementById("password2").value;
-
-    // xhttp2.onreadystatechange = function() {
-    //     if (this.readyState == 4 && this.status == 200) {
-
-    //        alerta();
-    //        console.log(this.responseText);
-    //     }
-    // };
-
-    // xhttp2.open("POST", "http://192.168.1.40/deliverass_client/login.php", true);
-    // xhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // xhttp2.send("dni2=" + dni2 + "&password2=" + password2);
-
-    // function alerta(){
-    //     alert("Login");
-    // }
-
-    $.ajax({
-        type: "POST",
-        url: "http://192.168.1.40/deliverass_client/login.php?dni2=" + dni2 + "&password2=" + password2,
-        dataType: "json",
-        success: function (response) {
-            if(response.result === true){
-                alert("LOGIN");
-            }
-        }
-    });
-
-}
+//         if($.trim(dni2).lenght > 0 && $.trim(password2).lenght > 0){
+//             $.ajax({
+//                 type: "POST",
+//                 crossDomain: true,
+//                 url: "http://192.168.1.40/deliverass_client/login.php",
+//                 data: {
+//                     dni2: dni2,
+//                     password2: password2
+//                 },
+//                 cache: false,
+//                 success: function(data){
+//                     alert(data);
+//                 }
+//             })
+//         }else{
+//             alert("ERROR");
+//         }

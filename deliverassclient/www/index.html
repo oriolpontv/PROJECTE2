@@ -30,7 +30,7 @@
             <label for="password2">CONTRASENYA</label>
             <input type="password" id="password2" name="password2" placeholder="Escriu la teva contrasenya.."required>
 
-            <input type="submit" onclick="accedir()" id="b1" value="ACCEDIR">
+            <input type="submit" id="b1" value="ACCEDIR">
         </form>
 
         <!-- REGISTRE -->
@@ -81,11 +81,43 @@
         </div>
 
     </div>
-    <script src="cordova.js"></script>
+    <!-- <script src="cordova.js"></script> -->
     <script src="js/index.js"></script>
     <script src="js/accessibilitat.js"></script>
     <script src="js/registre.js"></script>
-    <script src="js/login.js"></script>
+    <script type="text/javascript">
+
+            $("#b1").click(function(){
+                
+                var dni_login = $("#dni2").val();
+                var password_login = $("#password2").val();
+
+                console.log(dni2 + password2);
+
+                if($.trim(dni2).length > 0 && $.trim(password2).length > 0){
+                    event.preventDefault();
+                    $.ajax({
+                        type: "POST",
+                        crossDomain: true,
+                        url: "http://192.168.1.40/deliverass_client/login.php",
+                        data: {
+                            dni2: dni_login,
+                            password2: password_login
+                        },
+                        cache: false,
+                        success: function(data){
+                            alert(data);
+                            localStorage.setItem("dni",dni_login);
+                            location.replace("main.html");
+                        }
+                    })
+                }else{
+                    alert("ERROR UGNMA");
+                }
+
+            })
+
+    </script>
 </body>
 
 </html>
