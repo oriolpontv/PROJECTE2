@@ -1,0 +1,550 @@
+@font-face {
+   font-family: Maven Pro Bold;
+   src: url(../fonts/MavenPro-Bold.ttf);
+}
+
+@font-face {
+   font-family: Maven Pro Regular;
+   src: url(../fonts/MavenPro-Regular.ttf);
+}
+
+h1, h2, h3, h4, h5, h6{
+   font-family: Maven Pro Bold !important;
+}
+*{
+   font-family: Maven Pro Regular;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   height: 100vh; 
+}
+ 
+ @media screen and (max-width: 700px) {
+    body {
+       
+       width: 100%
+    }
+ }
+ 
+ a {
+    color: inherit;
+ }
+ 
+ .menu-item,
+ .menu-open-button {
+    background: #EEEEEE;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 80px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+ }
+ 
+ .menu-open {
+    display: none;
+ }
+ 
+ .lines {
+    width: 25px;
+    height: 3px;
+    background: #596778;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+ }
+ 
+ .line-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+ }
+ 
+ .line-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+ }
+ 
+ .line-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-1 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-2 {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-3 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+ }
+ 
+ .menu {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: -80%;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 26px;
+    z-index: 1000;
+ }
+ 
+ .menu-item:hover {
+    background: #F67871;
+    color: #3290B1;
+ }
+ 
+ .menu-item:nth-child(3) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+ }
+ 
+ .menu-item:nth-child(4) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+ }
+ 
+ .menu-item:nth-child(5) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+ }
+ 
+ .menu-item:nth-child(6) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+ }
+ 
+ .menu-item:nth-child(7) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+ }
+ 
+ .menu-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+ }
+ 
+ .menu-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+ }
+ 
+ .menu-open:checked + .menu-open-button {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+ }
+ 
+ .menu-open:checked ~ .menu-item {
+    -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+ }
+ 
+ .menu-open:checked ~ .menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    -webkit-transition-duration: 180ms;
+    -webkit-transform: translate3d(-105px, -10px, 0);
+    transform: translate3d(-105px, -10px, 0);
+ }
+ 
+ .menu-open:checked ~ .menu-item:nth-child(4) {
+    transition-duration: 280ms;
+    -webkit-transition-duration: 280ms;
+    -webkit-transform: translate3d(-50px, -100px, 0);
+    transform: translate3d(-50px, -100px, 0);
+ }
+ 
+ .menu-open:checked ~ .menu-item:nth-child(5) {
+    transition-duration: 380ms;
+    -webkit-transition-duration: 380ms;
+    -webkit-transform: translate3d(50px, -100px, 0);
+    transform: translate3d(50px, -100px, 0);
+ }
+ 
+ .menu-open:checked ~ .menu-item:nth-child(6) {
+    transition-duration: 480ms;
+    -webkit-transition-duration: 480ms;
+    -webkit-transform: translate3d(105px, -10px, 0);
+    transform: translate3d(105px, -10px, 0);
+ }
+ 
+ .menu-open:checked ~ .menu-item:nth-child(7) {
+    transition-duration: 580ms;
+    -webkit-transition-duration: 580ms;
+    -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+    transform: translate3d(-90.86291px, 52.62064px, 0);
+ }
+ 
+ .green {
+   background-color: #008F11;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.green:hover {
+   color: #5c5c5c;
+   text-shadow: none;
+}
+ 
+ .red {
+    background-color: #C1271F;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+ }
+ 
+ .red:hover {
+    color: #c2223f;
+    text-shadow: none;
+ }
+
+ .yellow {
+   background-color: #c0a300;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.yellow:hover {
+   color: #c2223f;
+   text-shadow: none;
+}
+  
+
+ main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   flex-grow: 1;
+}
+
+#zona_mapa{
+   width: 100%;
+   height: 100%;
+   /* border: 2px solid black; */
+}
+
+.popup{
+   width: 100%;
+   height: 100%;
+   background-color: #e0e0e0;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+.popup label{
+  font-size: 13px;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.botons{
+  /* margin-top: 1%; */
+  margin-left: 22.5%;
+}
+
+#cancelar{
+   background: none;
+   color: #a0a0a0;
+   font-size: 10px;
+   border: none;
+   width: 10vw;
+   height: 7.5vh;
+   margin-right: 25px;
+}
+
+#entrega{
+   background: none;
+   color: #C1271F;
+   font-size: 10px;
+   border: none;
+   width: 10vw;
+   height: 7.5vh;
+}
+
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-content {
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+   border-radius: 20px;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ #cameraTakePicture {
+   width: 100%;
+   background: rgb(167,26,18);
+   background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+ }
+
+ #btnEntregar {
+   width: 100%;
+   background: rgb(0,75,0);
+   background: linear-gradient(90deg, rgba(0,75,0,1) 0%, rgba(9,121,22,1) 100%, rgba(0,255,16,1) 100%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+ }
+ #btnUndo {
+   width: 100%;
+   background: rgb(240,171,34);
+   background: linear-gradient(90deg, rgba(240,171,34,1) 0%, rgba(222,211,53,1) 35%, rgba(255,226,0,1) 100%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+ }
+
+ #loadPicture {
+   width: 100%;
+   background: rgb(167,26,18);
+   background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+ }
+
+ #ImatgeCamara {
+   width: 100%;
+   border-radius: 13px;
+ }
+ .entregat{
+    background-color: rgb(216, 16, 16);
+    color: #fff;
+ }
+
+ .botons_accessibilitat {
+   padding: 30px 25%;
+}
+.titols_botons{
+   font-family: Maven Pro Bold;
+   color: #000;
+}
+.modal {
+   transition: all .4s ease;
+   display: none; 
+   position: fixed; 
+   z-index: 1000; 
+   padding-top: 100px; 
+   left: 0;
+   top: 0;
+   width: 100%; 
+   height: 100%; 
+   overflow: auto; 
+   background-color: rgb(0,0,0); 
+   background-color: rgba(0,0,0,0.4); 
+ }
+
+ .modal-content {
+   transition: all .4s ease;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+   border-radius: 20px;
+ }
+
+ .close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+#vision, #vision2 {
+   width: 100%;
+    background: rgb(167,26,18);
+    background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Maven Pro;
+}
+#vision:hover, #vision2:hover {
+   background: rgb(167,26,18);
+    transition: all .4s ease;
+    font-family: Maven Pro;
+  	background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+}
+
+.vision-dark{
+   background-color: #000 !important;
+   color: #fff !important;
+   transition: all .4s ease;
+}
+.vision-dark img {
+   filter: contrast(0.5);
+}
+.vision-dark form label{
+   background-color: #000 !important;
+   color: #fff !important;
+}
+.vision-dark input[type=text]{
+   color: #fff !important;
+}
+#resettext, #increasetext {
+   width: 100%;
+   background: rgb(167,26,18);
+   background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
+}
+
+#resettext:hover, #increasetext:hover {
+  background: rgb(167,26,18);
+   transition: all .4s ease;
+   font-family: Maven Pro;
+    background-color: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
+}
+
+.logo-main {
+   width: 80%;
+   margin: 0 auto;
+   padding-top: 15%;
+}
+
+.inici-jornada {
+   background-color: green;
+   width: 50%;
+   text-align: center;
+   margin: 0 auto;
+   padding: 30px 20px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff;
+   border-radius: 8px;
+   font-family: Maven Pro Bold;
+}
+.final-jornada {
+   background-color: #C1271F;
+   width: 50%;
+   text-align: center;
+   margin: 0 auto;
+   padding: 30px 20px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff;
+   border-radius: 8px;
+   font-family: Maven Pro Bold;
+   margin-top: 20px;
+}
+
+#estat-jornada {
+   margin: 0 auto;
+   padding: 40px 0 20px 0;
+}
