@@ -35,7 +35,7 @@
             </label>
 
             <a href="menu.html" class="menu-item red"> <i class="fa-solid fa-location-dot"></i></a>
-            <a href="#" class="menu-item red" onclick="window.location.reload();"> <i class="fas fa-sync-alt"></i></a>
+            <a href="#" class="menu-item red"><i id="myBtn22" class="fas fa-sign-out-alt"></i></a>
             <a href="horari.html" class="menu-item red"><i class="fa-regular fa-clock"></i> </a>
             <a href="llistat.html" class="menu-item red"> <i class="fas fa-list-check"> </i></a>
         </nav>
@@ -56,6 +56,12 @@
                     $("#llistat").append(data);
                 }
             })
+        })
+
+        $("#myBtn22").click(function(){
+            localStorage.removeItem("dni");
+            localStorage.removeItem("hora_inici");
+            location.replace("index.html");
         })
 
     </script>
